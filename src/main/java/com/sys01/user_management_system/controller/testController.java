@@ -17,10 +17,6 @@ public class testController {
 //    @GetMapping("/test")
     public  String testController() {
 
-
-        System.out.println("testController");
-
-
 //        return "testController--请求test接口";
         return testService.greet();
     }

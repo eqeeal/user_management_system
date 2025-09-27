@@ -13,7 +13,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public String greet(){
-        return "hello from TestServiceImpl"+testMapper.count();
+        return "hello from TestServiceImpl :用户表目前的用户数量"+testMapper.count();
     }
 
 }
