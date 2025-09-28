@@ -2,6 +2,7 @@ package com.sys01.user_management_system.controller;
 
 
 import com.sys01.user_management_system.mapper.UserMapper;
+import com.sys01.user_management_system.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,6 +38,13 @@ public class UserController {
     public List<String> selectAllUsers(){
         return userMapper.selectAllUsers();
     }
+    //精准查询单个用户信息
+    @RequestMapping("/searchByName")
+    public User searchUserByName(String username){
+        return userMapper.selectUserByName(username);
+    }
+
+
 
     //更新用户密码
     @RequestMapping("/updatePwd")
